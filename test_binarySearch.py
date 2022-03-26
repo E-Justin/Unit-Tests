@@ -11,7 +11,7 @@ class Test_TestBinarySearch(unittest.TestCase):
     def test_highBinarySearch(self): # highest number in list
         self.assertEqual(tryingStuff.binarySearch([77,11,99,22,88,44,33,66,55,12,17,91,45,71,81,0], 99), True)
 
-    def test_midBinarySearch(self): # middle-ish number in list
+    def test_midBinarySearch(self): # middle number in list
         self.assertEqual(tryingStuff.binarySearch([77,11,99,22,88,44,33,66,55,12,17,91,45,71,81,0], 55), True)
 
 
