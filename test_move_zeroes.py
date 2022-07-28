@@ -22,18 +22,19 @@ def move_zeroes(num_list: list[int]) -> list[int]:
     Given an integer array nums, move all 0's to the
        end of it while maintaining the relative order of
        the non-zero elements."""
-    if type(num_list) != list or type(num_list[0]) != int:
-        return 0
-    c = Counter(num_list)
-    zeroes = c[0]
-    length = len(num_list)
-    if length > 1 and zeroes > 0:
-        if length == zeroes:
-            return num_list
+    if type(num_list) != list or type(num_list[0]) != int:  # if argument is incorrect type
+        return 0  # return 0
+
+    c = Counter(num_list)  # get dictionary of key(nums in list) : value(counters)
+    zeroes = c[0]  # number of zeroes in list
+    length = len(num_list)  # get length
+    if length > 1 and zeroes > 0:  # if length is greater than 1 and there are 0s in list
+        if length == zeroes:  # if list contains nothing but zeroes
+            return num_list  # return the list given 
         while zeroes > 0:
-            num_list.remove(0)
-            num_list.append(0)
-            zeroes -= 1
+            num_list.remove(0)  # remove zeroes one at a time
+            num_list.append(0)  # append zeroes to end
+            zeroes -= 1  # decrement 0 counter
 
     return num_list
 
