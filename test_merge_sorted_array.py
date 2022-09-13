@@ -1,4 +1,6 @@
 def merge_array(list_a, a, list_b, b):
+    """ Runtime: 43 ms
+    Memory Usage: 13.9 MB"""
     # get lengths
     length_a = len(list_a)
     length_b = len(list_b)
